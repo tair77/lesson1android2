@@ -8,12 +8,24 @@
     tools:context=".fragment.CreateTaskFragment">
 
     <EditText
-        android:id="@+id/task_ed"
+        android:id="@+id/ed_task"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Text"
         android:textColor="@color/black"
         android:textSize="20sp" />
+    <EditText
+        android:id="@+id/et_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Text"
+        android:textColor="@color/black"
+        android:inputType="number"
+        android:textSize="20sp" />
+
+
+
+
 
     <Button
         android:layout_marginTop="12dp"
@@ -21,5 +33,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Принять" />
+
 
 </LinearLayout>

@@ -19,6 +19,7 @@ public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
     String text;
+    String number;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,6 +39,7 @@ public class HomeFragment extends Fragment {
     private String getData()  {
         if (getArguments() != null) {
             text = getArguments().getString("key");
+            number = getArguments().getString("A");
             return text;
         }
         return "";
@@ -48,6 +50,7 @@ public class HomeFragment extends Fragment {
         binding.homeRecycler.setAdapter(homeAdapter);
         if (!getData().isEmpty()){
             homeAdapter.addText(text);
+            homeAdapter.addText(number);
         }
     }
 

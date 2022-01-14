@@ -40,13 +40,13 @@ public class CreateTaskFragment extends Fragment {
     }
 
     private void sendText() {
-        String text = binding.taskEd.getText().toString();
-        if (text.isEmpty()) {
-            binding.taskEd.setError("Ошибка");
-        } else {
-            Bundle bundle = new Bundle();
-            bundle.putString("key", text);
-            Navigation.findNavController(requireView()).navigate(R.id.homeFragment, bundle);
-        }
+        String text = binding.edTask.getText().toString();
+        String number = binding.etNumber.getText().toString();
+        Bundle bundle = new Bundle();
+        bundle.putString("key", text);
+        bundle.putString("A", number);
+        Navigation.findNavController(requireView()).navigate(R.id.homeFragment, bundle);
+
     }
+
 }
